@@ -8,4 +8,4 @@ cp apache_exporter-0.7.0.linux-amd64/apache_exporter /usr/local/bin/apache_expor
 rm -rf  apache_exporter-0.7.0.linux-amd64*
 
 EXPOSE 9117
-ENTRYPOINT ["/usr/local/bin/apache_exporter --scrape_uri="$SCRAPE_URI"]
+CMD ["/usr/local/bin/apache_exporter", "--scrape_uri='$SCRAPE_URI'"]
