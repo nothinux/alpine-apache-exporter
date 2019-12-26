@@ -9,4 +9,4 @@ cp apache_exporter-0.7.0.linux-amd64/apache_exporter /usr/local/bin/apache_expor
 rm -rf  apache_exporter-0.7.0.linux-amd64*
 
 EXPOSE 9117
-CMD ["/usr/local/bin/apache_exporter", "--scrape_uri=http://localhost:8081/server-status?auto"]
+CMD ["/usr/local/bin/apache_exporter", "--scrape_uri=http://localhost:8081/server-status?auto", ">", "/dev/null"]
